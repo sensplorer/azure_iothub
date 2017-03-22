@@ -1,10 +1,10 @@
 ---
 platform: linux
-device: SPx-B1616
+device: SENSPLORER SPx-B1616
 language: c
 ---
 
-Run a simple C sample on SPx-B1616 device running customised LINUX Angstrom Distribution
+Run a simple C sample on SENSPLORER SPx-B1616 device running customised LINUX Angstrom Distribution
 ===
 ---
 
@@ -20,7 +20,7 @@ Run a simple C sample on SPx-B1616 device running customised LINUX Angstrom Dist
 
 **About this document**
 
-This document describes how to connect SPx-B1616 device running customised LINUX Angstrom Distribution with Azure IoT SDK. This multi-step process includes:
+This document describes how to connect SENSPLORER SPx-B1616 device running customised LINUX Angstrom Distribution with Azure IoT SDK. This multi-step process includes:
 -   Configuring Azure IoT Hub
 -   Registering your IoT device
 -   Build and deploy Azure IoT SDK on device
@@ -33,18 +33,18 @@ You should have the following items ready before beginning the process:
 -   [Prepare your development environment][setup-devbox-linux]
 -   [Setup your IoT hub][lnk-setup-iot-hub]
 -   [Provision your device and get its credentials][lnk-manage-iot-hub]
--   SPx-B1616 device
+-   SENSPLORER SPx-B1616 device
 -   LINUX platform
 -   Cross compiler settings from git clone https://github.com/sensplorer/spx_azure_iothub_c.git 
 
 <a name="PrepareDevice"></a>
 # Step 2: Prepare your Device
--   Power up SPx-B1616 Device and connect network cable to same network with your LINUX platform.
--   Connect SPx-B1616 Device via ssh:
+-   Power up SENSPLORER SPx-B1616 Device and connect network cable to same network with your LINUX platform.
+-   Connect SENSPLORER SPx-B1616 Device via ssh:
 
-        ssh root@<IP address of SPx-B1616>
+        ssh root@<IP address of SENSPLORER SPx-B1616>
 
-    Note:Default IP address of SPx-B1616 is 192.168.1.128.
+    Note:Default IP address of SENSPLORER SPx-B1616 is 192.168.1.128.
 
 
 <a name="Build"></a>
@@ -115,24 +115,24 @@ You should have the following items ready before beginning the process:
 
         ./build.sh --toolchain-file toolchain-spx-b1616.cmake -cl --sysroot=$SPX_ROOT
 
--   Copy samples from your LINUX platform to SPx-B1616 Device:
+-   Copy samples from your LINUX platform to SENSPLORER SPx-B1616 Device:
 
     **For AMQP protocol:**
 
-        scp ~/azure-iot-sdk-c/cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_amqp/iothub_client_sample_amqp root@<IP address of SPx-B1616>:
+        scp ~/azure-iot-sdk-c/cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_amqp/iothub_client_sample_amqp root@<IP address of SENSPLORER SPx-B1616>:
 
     **For HTTPS protocol:**
 
-        scp ~/azure-iot-sdk-c/cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_http/iothub_client_sample_http root@<IP address of SPx-B1616>:
+        scp ~/azure-iot-sdk-c/cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_http/iothub_client_sample_http root@<IP address of SENSPLORER SPx-B1616>:
 
     **For MQTT protocol:**
 
-        scp ~/azure-iot-sdk-c/cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_mqtt/iothub_client_sample_mqtt root@<IP address of SPx-B1616>:
+        scp ~/azure-iot-sdk-c/cmake/iotsdk_linux/iothub_client/samples/iothub_client_sample_mqtt/iothub_client_sample_mqtt root@<IP address of SENSPLORER SPx-B1616>:
         
 
 ## 3.2 Send Device Events to IoT Hub:
 
--   Run the sample by issuing following command on SPx-B1616 Device:
+-   Run the sample by issuing following command on SENSPLORER SPx-B1616 Device:
 
     **For AMQP protocol:**
 
